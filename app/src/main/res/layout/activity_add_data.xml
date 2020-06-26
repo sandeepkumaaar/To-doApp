@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AddDataActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarSecond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme"
+        android:background="@android:color/black">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back"
+                android:tint="@android:color/white"
+                android:contentDescription="@string/app_name"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_to_do_item"
+                android:textColor="@android:color/white"
+                android:layout_centerInParent="true"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/ll_data"
+        android:layout_below="@id/toolbarSecond"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/et_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/title"
+            android:textSize="18sp"
+            android:background="@drawable/border"
+            android:textColor="@android:color/black"
+            android:inputType="text"
+            android:paddingStart="10dp"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/et_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:lines="24"
+            android:lineSpacingExtra="8sp"
+            android:padding="10dp"
+            android:hint="@string/description"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:background="@drawable/border"
+            android:layout_marginTop="10dp"
+            android:importantForAutofill="no" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:background="@android:color/black"
+            tools:ignore="ButtonStyle" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"/>
+
+        <Button
+            android:id="@+id/btnDone"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/done"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:background="@android:color/black"
+            tools:ignore="ButtonStyle" />
+
+    </LinearLayout>
+
+</RelativeLayout>
